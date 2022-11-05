@@ -548,21 +548,23 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     text-decoration: none;
 }
 
+.portfolio-img {
+    display: block;
+}
+
 /* Portfolio overlay */
 
 .portfolio-overlay {
     position: relative;
     overflow: hidden;
-
-    height: 294px;
 }
 
 .portfolio-item:hover .portfolio-overlay-text {
-    transition: transform 250ms var(--timing-function);
     transform: translateY(0)
 }
 
 .portfolio-overlay-text {
+    transition: transform 250ms var(--timing-function);
     position: absolute;
     transform: translateY(100%);
     top: 0;
@@ -575,15 +577,18 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     line-height: 1.55;
     letter-spacing: 0.03em;
 
-    background-color: var(--accent-color);
-    opacity: 90%;
+    background-color: rgba(33, 150, 243, 0.9);
     color: var(--secondary-color);
 }
 
 /* Portfolio overlay over */
 
+.portfolio-item-text {
+    padding: 24px 20px;
+}
+
 .portfolio-title {
-    padding: 20px 24px 4px;
+    margin-bottom: 4px;
 
     font-size: 18px;
     line-height: 2;
@@ -593,9 +598,6 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .portfolio-text {
-    padding-left: 24px;
-    padding-bottom: 20px;
-
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
